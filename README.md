@@ -5,7 +5,7 @@ This repository is about the implementation of homomorphic encryption scheme (DG
 
 该版本相对于https://github.com/limengfei1187/DGHVlib的 DGHVlib增加了二次偏移公钥压缩算法，随机偏移公钥压缩算法，秘钥转换和模转换算法。
 
-可以自己编译，进入src文件夹里打开terminal make 就能够编译成静态链接库DGHVlib.a 该同态加密库是在ubuntu环境下完成的。如果使用尽量在linux环境下使用，因为代码中 unsigned long int 类型在windows 占4个字节， linux下占8个字节，而gmp该精度运算库的每个limb占8个字节。在windows 下编译可能会出现结果错误。
+可以自己编译，进入src文件夹里打开terminal make 就能够编译成静态链接库DGHVlib.a 该同态加密库是在ubuntu环境下完成的，用到了linux系统日期函数，需要在linux环境下使用。将生成的DGHVlib.a和dghv.h头文件复制到test文件夹中，可以运行测试代码。
 
 #define TOY 0 // 是个参数级别 参见secstg.h 也可以自己设置 自己设置后需要用 //bool para_valid(__sec_setting* para)验证一下,参数是否合理 #define SMALL 1 #define MEDIUM 2 #define LARGE 3
 
