@@ -81,7 +81,7 @@
      while(!feof(in)){
          if(i == 0){
              header = fgets(header, 2*W, in);
-             sscanf(header, "Ciphertext:%d", &len1);
+             sscanf(header, "Ciphertexts:%d", &len1);
     	     buffer = (char**)malloc((len1+1) * sizeof(char*));
              buffer[0]= (char*)malloc(2*W * sizeof(char));
              sprintf(buffer[0], "%d", len1);
